@@ -10,7 +10,7 @@ Step 1. Add the JitPack repository to your build file:
 Add it in your root build.gradle at the end of repositories:
 ~~~
 
-allprojects {
+	allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
@@ -49,9 +49,9 @@ Step 2. Add the dependecy
 ~~~
 
 	<dependency>
-	    <groupId>com.github.Kamel-Q</groupId>
-	    <artifactId>cleanexception</artifactId>
-	    <version>1.0.0</version>
+		 <groupId>com.github.Kamel-Q</groupId>
+	 	 <artifactId>cleanexception</artifactId>
+		 <version>1.0.0</version>
 	</dependency>
   
 ~~~
@@ -60,7 +60,7 @@ Step 2. Add the dependecy
 Step 3. Add permission to the manifest file:
 
 ~~~
-    <uses-permission android:name="android.permission.INTERNET" />
+    	<uses-permission android:name="android.permission.INTERNET" />
 ~~~
 
 Step 4. Use the library inside your catch clause:
@@ -70,10 +70,11 @@ Step 4. Use the library inside your catch clause:
 
     catch(ex:Exception){
     
-    CleanException.Init(apiKey,apiSecret,projectKey) // mandatory to link between the client and the server
-    CleanException.setTitle("Example title")
-    CleanException.setDescription("Example description)
-    CleanException.sendExceptionError(ex,this)
+    	CleanException.Init(apiKey,apiSecret,projectKey) // mandatory to link between the client and the server
+   	CleanException.setTitle("Example title")
+    	CleanException.setDescription("Example description)
+    	CleanException.sendExceptionError(ex,this)
+	
     }
     
 ~~~
